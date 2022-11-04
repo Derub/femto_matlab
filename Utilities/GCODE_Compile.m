@@ -406,7 +406,7 @@ end
                 end
                 
                 if ~isempty(angle_GCODE)
-                    if (i>1)&&(angle_GCODE(i)~=angle_GCODE(i-1))||(i==1)
+                    if ((i>1)&&(angle_GCODE(i)~=angle_GCODE(i-1))||(i==1))&& ~isnan(angle_GCODE(i))
                         fprintf(fid, ' A%f ',angle_GCODE(i));
                     end
                 end  
@@ -467,7 +467,7 @@ end
                     end
                 end
                 if ~isempty(angle_GCODE)
-                    if (i>1)&&(angle_GCODE(i)~=angle_GCODE(i-1))||(i==1)
+                    if ((i>1)&&(angle_GCODE(i)~=angle_GCODE(i-1))||(i==1))&& ~isnan(angle_GCODE(i))
                         fprintf(fid, ' A%f ',angle_GCODE(i));
                     end
                 end                
